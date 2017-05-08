@@ -1,0 +1,33 @@
+﻿<Page
+    x:Class="cookbook_ui.AccountPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:cookbook_ui"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="49*" />
+            <RowDefinition Height="271*" />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" VerticalAlignment="Top" Margin="20,20,20,0" HorizontalAlignment="Stretch" Height="60">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="80" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Ellipse Grid.Column="0" Width="60" Height="60" Fill="Black" />
+            <TextBlock Grid.Column="1" Text="Nick Name" VerticalAlignment="Center" HorizontalAlignment="Center"
+                  FontSize="24" FontWeight="SemiBold" FontFamily="open sans"/>
+        </Grid>
+        <Grid VerticalAlignment="Stretch" Grid.Row="1" Margin="0,0,0,0">
+            <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <Button Content="TEST" HorizontalAlignment="Stretch" Margin="10" Height="60" />
+                
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>

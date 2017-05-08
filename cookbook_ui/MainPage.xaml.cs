@@ -29,7 +29,7 @@ namespace cookbook_ui
             var currentView = SystemNavigationManager.GetForCurrentView();
             currentView.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Visible;
             currentView.BackRequested += CurrentView_BackRequested;
-
+            
             navigateToPage(typeof(HomePage));
         }
 
