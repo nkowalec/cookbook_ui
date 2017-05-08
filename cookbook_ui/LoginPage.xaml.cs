@@ -26,5 +26,10 @@ namespace cookbook_ui
         {
             this.InitializeComponent();
         }
+
+        private void SubmitBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

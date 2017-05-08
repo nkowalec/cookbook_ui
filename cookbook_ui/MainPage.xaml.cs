@@ -49,13 +49,18 @@ namespace cookbook_ui
             SplitView.IsPaneOpen = !SplitView.IsPaneOpen;
         }
 
-        private void navigateToPage(Type pageType)
+        private void navigateToPage(Type pageType, object parameter = null)
         {
             if(Frame.Content?.GetType() != pageType)
             {
-                Frame.Navigate(pageType);
+                Frame.Navigate(pageType, parameter);
             }
             SplitView.IsPaneOpen = false;
+        }
+
+        private void LoginRadioButton_Click(object sender, RoutedEventArgs e)
+        {
+            navigateToPage(typeof(LoginPage));
         }
     }
 }
