@@ -25,8 +25,9 @@
         </Grid>
         <Grid VerticalAlignment="Stretch" Grid.Row="1" Margin="0,0,0,0">
             <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                <Button Content="TEST" HorizontalAlignment="Stretch" Margin="10" Height="60" />
-                
+                <Button Content="MOJE PRZEPISY" HorizontalAlignment="Stretch" Style="{StaticResource LargeBtnStyle}" />
+                <Button Content="DODAJ PRZEPIS" HorizontalAlignment="Stretch" Style="{StaticResource LargeBtnStyle}" />
+                <Button Content="ULUBIONE" HorizontalAlignment="Stretch" Style="{StaticResource LargeBtnStyle}" />
             </StackPanel>
         </Grid>
     </Grid>
