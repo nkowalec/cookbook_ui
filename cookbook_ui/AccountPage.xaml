@@ -13,21 +13,37 @@
             <RowDefinition Height="271*" />
         </Grid.RowDefinitions>
 
-        <Grid Grid.Row="0" VerticalAlignment="Top" Margin="20,20,20,0" HorizontalAlignment="Stretch" Height="60">
+        <Grid Grid.Row="0" VerticalAlignment="Top" Margin="20,0,20,0" HorizontalAlignment="Stretch" Height="100">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="80" />
+                <ColumnDefinition Width="100" />
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
 
-            <Ellipse Grid.Column="0" Width="60" Height="60" Fill="Black" />
-            <TextBlock Grid.Column="1" Text="Nick Name" VerticalAlignment="Center" HorizontalAlignment="Center"
+            <Ellipse Grid.Column="0" Width="100" Height="100">
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="/Assets/chef_logo.jpg" Stretch="UniformToFill" />
+                </Ellipse.Fill>
+            </Ellipse>
+            <TextBlock Grid.Column="1" Text="Cook Chef" VerticalAlignment="Center" HorizontalAlignment="Center"
                   FontSize="24" FontWeight="SemiBold" FontFamily="open sans"/>
         </Grid>
         <Grid VerticalAlignment="Stretch" Grid.Row="1" Margin="0,0,0,0">
             <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                <Button Content="MOJE PRZEPISY" HorizontalAlignment="Stretch" Style="{StaticResource LargeBtnStyle}" />
-                <Button Content="DODAJ PRZEPIS" HorizontalAlignment="Stretch" Style="{StaticResource LargeBtnStyle}" />
-                <Button Content="ULUBIONE" HorizontalAlignment="Stretch" Style="{StaticResource LargeBtnStyle}" />
+                <Button Content="MOJE PRZEPISY" HorizontalAlignment="Stretch" Style="{StaticResource LargeBtnStyle}" >
+                    <Button.Background>
+                        <ImageBrush x:Name="brush1" ImageSource="/Assets/cookbook.jpg" Stretch="UniformToFill" Opacity="0.8" />
+                    </Button.Background>
+                </Button>
+                <Button Content="DODAJ PRZEPIS" HorizontalAlignment="Stretch" Style="{StaticResource LargeBtnStyle}" >
+                    <Button.Background>
+                        <ImageBrush ImageSource="Assets/add_recipie.jpg" Opacity="0.8" Stretch="UniformToFill"/>
+                    </Button.Background>
+                </Button>
+                <Button Content="ULUBIONE" HorizontalAlignment="Stretch" Style="{StaticResource LargeBtnStyle}" >
+                    <Button.Background>
+                        <ImageBrush Stretch="UniformToFill" ImageSource="Assets/liked.jpg" Opacity="0.8"/>
+                    </Button.Background>
+                </Button>
             </StackPanel>
         </Grid>
     </Grid>

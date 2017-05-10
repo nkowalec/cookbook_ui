@@ -9,13 +9,26 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <StackPanel>
-            <Ellipse Width="220" Height="220" Fill="Black" Margin="0,20"/>
+            <Ellipse Width="220" Height="220" Margin="0,20">
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="/Assets/chef_logo.jpg" Stretch="UniformToFill" />
+                </Ellipse.Fill>
+            </Ellipse>
             <TextBlock Text="Login:" Margin="25,0,0,0" />
-            <TextBox x:Name="loginBox" Margin="20,5" PlaceholderText="Login" Background="#EEEEEE" />
+            <TextBox x:Name="loginBox" Margin="20,5" PlaceholderText="Login" Height="60" Background="#EEEEEE" 
+                     FontSize="30"/>
             <TextBlock Text="Hasło:" Margin="25,15,0,0" />
-            <PasswordBox x:Name="passBox" Margin="20,5" PlaceholderText="Hasło" Background="#EEEEEE" />
-            <Button x:Name="SubmitBtn" Click="SubmitBtn_Click" Content="Zaloguj" Margin="20,20,20,0" 
-                    HorizontalAlignment="Stretch" Height="40" />
+            <PasswordBox x:Name="passBox" Margin="20,5" PlaceholderText="Hasło" Height="60" Background="#EEEEEE"
+                     FontSize="30"/>
+            <Button x:Name="SubmitBtn" Click="SubmitBtn_Click" Content="ZALOGUJ" Margin="20,20,20,0" 
+                    HorizontalAlignment="Stretch" Height="80" FontSize="26" FontWeight="Medium" Foreground="#333333">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFDDDDDD" Offset="1"/>
+                        <GradientStop Color="#FFEEEEEE" Offset="0.632"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
         </StackPanel>
     </Grid>
 </Page>

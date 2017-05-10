@@ -116,6 +116,10 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\add_recipie.jpg" />
+    <Content Include="Assets\chef_logo.jpg" />
+    <Content Include="Assets\cookbook.jpg" />
+    <Content Include="Assets\liked.jpg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
