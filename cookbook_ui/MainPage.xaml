@@ -33,6 +33,8 @@
             <SplitView.Pane>
                 <StackPanel>
                     <RadioButton x:Name="HomeRadioButton" Click="HomeRadioButton_Click" Style="{StaticResource NavRadioButtonStyle}" Tag="&#xE80F;" Content="Home" GroupName="Navigation"/>
+                    <RadioButton x:Name="SearchRadioButton" Click="SearchRadioButton_Click" Style="{StaticResource NavRadioButtonStyle}" Tag="&#xE094;" Content="Szukaj" GroupName="Navigation"/>
+                    <RadioButton x:Name="CategoriesRadioButton" Click="CategoriesRadioButton_Click" Style="{StaticResource NavRadioButtonStyle}" Tag="&#xE8DE;" Content="Kategorie" GroupName="Navigation"/>
                     <RadioButton x:Name="LoginRadioButton" Click="LoginRadioButton_Click" Style="{StaticResource NavRadioButtonStyle}" Tag="&#xE111;" Content="Zaloguj" GroupName="Navigation"/>
                 </StackPanel>
             </SplitView.Pane>

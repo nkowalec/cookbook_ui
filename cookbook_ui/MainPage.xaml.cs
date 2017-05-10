@@ -62,5 +62,15 @@ namespace cookbook_ui
         {
             navigateToPage(typeof(LoginPage));
         }
+
+        private void SearchRadioButton_Click(object sender, RoutedEventArgs e)
+        {
+            navigateToPage(typeof(SearchPage));
+        }
+
+        private void CategoriesRadioButton_Click(object sender, RoutedEventArgs e)
+        {
+            navigateToPage(typeof(CategoriesPage));
+        }
     }
 }
