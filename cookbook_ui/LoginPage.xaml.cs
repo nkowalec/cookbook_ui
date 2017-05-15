@@ -30,6 +30,8 @@ namespace cookbook_ui
 
         private void SubmitBtn_Click(object sender, RoutedEventArgs e)
         {
+            MainPage.Zalogowany = true;
+
             this.Frame.Navigate(typeof(AccountPage));
         }
     }

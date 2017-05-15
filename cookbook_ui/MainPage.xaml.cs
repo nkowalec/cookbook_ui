@@ -23,13 +23,38 @@ namespace cookbook_ui
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        private static bool _zalogowany = false;
+        public static bool Zalogowany
+        {
+            get { return _zalogowany; }
+            set
+            {
+                _zalogowany = value;
+                if (value)
+                {
+                    _loginRadioBtn.Content = "Wyloguj";
+                    _accountRadioBtn.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    _loginRadioBtn.Content = "Zaloguj";
+                    _accountRadioBtn.Visibility = Visibility.Collapsed;
+                }
+            }
+        }
+
+        private static RadioButton _loginRadioBtn;
+        private static RadioButton _accountRadioBtn;
+
+
         public MainPage()
         {
             this.InitializeComponent();
             var currentView = SystemNavigationManager.GetForCurrentView();
             currentView.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Visible;
             currentView.BackRequested += CurrentView_BackRequested;
-            
+            _loginRadioBtn = LoginRadioButton;
+            _accountRadioBtn = AccountRadioButton;
             navigateToPage(typeof(HomePage));
         }
 
@@ -60,7 +85,15 @@ namespace cookbook_ui
 
         private void LoginRadioButton_Click(object sender, RoutedEventArgs e)
         {
-            navigateToPage(typeof(LoginPage));
+            if (Zalogowany)
+            {
+                Zalogowany = !Zalogowany;
+                navigateToPage(typeof(HomePage));
+            }
+            else
+            {
+                navigateToPage(typeof(LoginPage));
+            }
         }
 
         private void SearchRadioButton_Click(object sender, RoutedEventArgs e)
@@ -71,6 +104,11 @@ namespace cookbook_ui
         private void CategoriesRadioButton_Click(object sender, RoutedEventArgs e)
         {
             navigateToPage(typeof(CategoriesPage));
+        }
+
+        private void AccountRadioButton_Click(object sender, RoutedEventArgs e)
+        {
+            navigateToPage(typeof(AccountPage));
         }
     }
 }
