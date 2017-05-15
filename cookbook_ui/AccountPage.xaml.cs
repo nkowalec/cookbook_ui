@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -25,6 +26,16 @@ namespace cookbook_ui
         public AccountPage()
         {
             this.InitializeComponent();
+        }
+
+        private async void Button_Click(object sender, RoutedEventArgs e)
+        {
+            await new MessageDialog("Widok przepisów użytkownika - jak \"Przeglądaj\"").ShowAsync();
+        }
+
+        private async void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            await new MessageDialog("Widok ulubionych przepisów użytkownika - jak \"Przeglądaj\"").ShowAsync();
         }
     }
 }
