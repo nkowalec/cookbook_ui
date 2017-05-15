@@ -30,9 +30,24 @@ namespace cookbook_ui
 
         private void SubmitBtn_Click(object sender, RoutedEventArgs e)
         {
-            MainPage.Zalogowany = true;
+            bool flag = true;
+            if (string.IsNullOrEmpty(loginBox.Text))
+            {
+                loginBox.Background = new SolidColorBrush(Colors.OrangeRed);
+                flag = false;
+            }
+            if (string.IsNullOrEmpty(passBox.Password))
+            {
+                passBox.Background = new SolidColorBrush(Colors.OrangeRed);
+                flag = false;
+            }
 
-            this.Frame.Navigate(typeof(AccountPage));
+            if (flag)
+            {
+                MainPage.Zalogowany = true;
+                
+                this.Frame.Navigate(typeof(AccountPage));
+            }
         }
     }
 }
