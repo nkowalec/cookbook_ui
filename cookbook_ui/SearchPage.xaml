@@ -41,6 +41,8 @@
             <CheckBox Content="Szukaj w opisach" IsChecked="True" />
             <CheckBox Content="Wegetariańskie" />
             <CheckBox Content="Wegańskie"/>
+            <CheckBox Content="Bezglutenowe" />
+            <CheckBox Content="Koszerne" />
         </StackPanel>
     </Grid>
 </Page>
