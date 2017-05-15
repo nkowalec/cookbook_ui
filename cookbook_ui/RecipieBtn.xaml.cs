@@ -22,6 +22,7 @@ namespace cookbook_ui
         public RecipieBtn()
         {
             this.InitializeComponent();
+            
         }
 
         public string Text
@@ -69,7 +70,6 @@ namespace cookbook_ui
         // Using a DependencyProperty as the backing store for Cost.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty CostProperty =
             DependencyProperty.Register("Cost", typeof(string), typeof(RecipieBtn), null);
-
 
     }
 }

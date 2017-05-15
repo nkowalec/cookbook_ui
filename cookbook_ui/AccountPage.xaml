@@ -34,7 +34,7 @@
                         <ImageBrush x:Name="brush1" ImageSource="/Assets/cookbook.jpg" Stretch="UniformToFill" Opacity="0.8" />
                     </Button.Background>
                 </Button>
-                <Button Content="DODAJ PRZEPIS" HorizontalAlignment="Stretch" Style="{StaticResource LargeBtnStyle}" >
+                <Button Content="DODAJ PRZEPIS" HorizontalAlignment="Stretch" Style="{StaticResource LargeBtnStyle}" Click="Button_Click_2" >
                     <Button.Background>
                         <ImageBrush ImageSource="Assets/add_recipie.jpg" Opacity="0.8" Stretch="UniformToFill"/>
                     </Button.Background>

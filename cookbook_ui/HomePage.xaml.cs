@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -25,6 +26,16 @@ namespace cookbook_ui
         public HomePage()
         {
             this.InitializeComponent();
+        }
+
+        private async void RecipieBtn_PointerPressed(object sender, PointerRoutedEventArgs e)
+        {
+                await new MessageDialog("Otwarcie okna przepisu, przykład widoku w pierwszym przepisie.").ShowAsync();
+        }
+
+        private void RecipieBtn_PointerPressed_1(object sender, PointerRoutedEventArgs e)
+        {
+
         }
     }
 }

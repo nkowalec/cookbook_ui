@@ -21,26 +21,17 @@ namespace cookbook_ui
     /// <summary>
     /// Pusta strona, która może być używana samodzielnie lub do której można nawigować wewnątrz ramki.
     /// </summary>
-    public sealed partial class AccountPage : Page
+    public sealed partial class AddRecipie : Page
     {
-        public AccountPage()
+        public AddRecipie()
         {
             this.InitializeComponent();
         }
 
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
-            await new MessageDialog("Widok przepisów użytkownika - jak \"Przeglądaj\"").ShowAsync();
-        }
-
-        private async void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            await new MessageDialog("Widok ulubionych przepisów użytkownika - jak \"Przeglądaj\"").ShowAsync();
-        }
-
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(AddRecipie));
+            await new MessageDialog("Zapis przepisu użytkownika").ShowAsync();
+            Frame.GoBack();
         }
     }
 }

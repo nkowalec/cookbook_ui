@@ -10,9 +10,12 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <ScrollViewer>
             <StackPanel>
-                <local:RecipieBtn Text="ZAPIEKANKA MAKARONOWA Z KURCZAKIEM" Image="Assets/dania/zapiekanka_makaronowa.jpg" HorizontalAlignment="Stretch" Margin="5" PrepTime="45 min" Cost="średni" />
-                <local:RecipieBtn Text="ZUPA KREM Z CUKINII" Image="Assets/dania/zupakremzcukinii.jpg" HorizontalAlignment="Stretch" Margin="5" PrepTime="30 min" Cost="niski" />
-                <local:RecipieBtn Text="PIZZA MARGHERITA" Image="Assets/dania/pizza_margherita.jpg" HorizontalAlignment="Stretch" Margin="5" PrepTime="50 min" Cost="niski" />
+                <local:RecipieBtn Text="ZAPIEKANKA MAKARONOWA Z KURCZAKIEM" Image="Assets/dania/zapiekanka_makaronowa.jpg" 
+                                  HorizontalAlignment="Stretch" Margin="5" PrepTime="45 min" Cost="średni" PointerPressed="RecipieBtn_PointerPressed_1" />
+                <local:RecipieBtn Text="ZUPA KREM Z CUKINII" Image="Assets/dania/zupakremzcukinii.jpg" HorizontalAlignment="Stretch" 
+                                  Margin="5" PrepTime="30 min" Cost="niski" PointerPressed="RecipieBtn_PointerPressed" />
+                <local:RecipieBtn Text="PIZZA MARGHERITA" Image="Assets/dania/pizza_margherita.jpg" HorizontalAlignment="Stretch" 
+                                  Margin="5" PrepTime="50 min" Cost="niski" PointerPressed="RecipieBtn_PointerPressed" />
             </StackPanel>
         </ScrollViewer>
     </Grid>
