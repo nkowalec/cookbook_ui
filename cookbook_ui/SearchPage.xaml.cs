@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Text;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -25,6 +27,19 @@ namespace cookbook_ui
         public SearchPage()
         {
             this.InitializeComponent();
+            MainPage.PokazujKomendy(true);
+        }
+
+        private async void Button_Click(object sender, RoutedEventArgs e)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine("Koszt: " + ((ComboBoxItem)kosztCBox.SelectedItem).Content);
+            sb.AppendLine("Czas: " + ((ComboBoxItem)czasCBox.SelectedItem).Content);
+            sb.AppendLine("Kategoria: " + ((ComboBoxItem)katCBox.SelectedItem).Content);
+            
+            MessageDialog dial = new MessageDialog("Widok wyszukanych przepisów: \n" + sb.ToString());
+            await dial.ShowAsync();
+            Frame.Navigate(typeof(HomePage));
         }
     }
 }

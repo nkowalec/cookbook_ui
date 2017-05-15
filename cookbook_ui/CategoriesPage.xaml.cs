@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -25,6 +26,11 @@ namespace cookbook_ui
         public CategoriesPage()
         {
             this.InitializeComponent();
+        }
+
+        public async void Open_Category(object sender, RoutedEventArgs args)
+        {
+            await new MessageDialog("Otwarcie kategorii " + ((Button)sender).Content + "\n widok jak \"GŁÓWNY\" - Przeglądaj").ShowAsync();
         }
     }
 }

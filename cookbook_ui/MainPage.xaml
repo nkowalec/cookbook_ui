@@ -8,7 +8,7 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <CommandBar ClosedDisplayMode="Compact" >
+        <CommandBar ClosedDisplayMode="Compact" Name="commbar" >
             <CommandBar.Content>
                 <Grid>
                     <AppBarButton Click="HamburgerButton_Click">
@@ -20,19 +20,19 @@
                 </Grid>
             </CommandBar.Content>
             <CommandBar.PrimaryCommands>
-                <AppBarButton Icon="Accept" Label="Accept"/>
-                <AppBarButton Icon="Cancel" Label="Cancel"/>
+                <AppBarButton Icon="Send" Label="Poleć" Click="AppBarButton_Click_3"/>
             </CommandBar.PrimaryCommands>
             <CommandBar.SecondaryCommands>
-                <AppBarButton Icon="Like" Label="Like" />
-                <AppBarButton Icon="Dislike" Label="Dislike" />
+                <AppBarButton Icon="Like" Label="Ekstra" Click="AppBarButton_Click" />
+                <AppBarButton Icon="Dislike" Label="Słabe" Click="AppBarButton_Click_1" />
+                <AppBarButton Icon="Comment" Label="Komentarz" Click="AppBarButton_Click_2" />
             </CommandBar.SecondaryCommands>
         </CommandBar>
 
         <SplitView Name="SplitView" IsPaneOpen="False" Margin="0,48,0,0">
             <SplitView.Pane>
                 <StackPanel>
-                    <RadioButton x:Name="HomeRadioButton" Click="HomeRadioButton_Click" Style="{StaticResource NavRadioButtonStyle}" Tag="&#xE80F;" Content="Home" GroupName="Navigation"/>
+                    <RadioButton x:Name="HomeRadioButton" Click="HomeRadioButton_Click" Style="{StaticResource NavRadioButtonStyle}" Tag="&#xE80F;" Content="Przeglądaj" GroupName="Navigation"/>
                     <RadioButton x:Name="SearchRadioButton" Click="SearchRadioButton_Click" Style="{StaticResource NavRadioButtonStyle}" Tag="&#xE094;" Content="Szukaj" GroupName="Navigation"/>
                     <RadioButton x:Name="CategoriesRadioButton" Click="CategoriesRadioButton_Click" Style="{StaticResource NavRadioButtonStyle}" Tag="&#xE8DE;" Content="Kategorie" GroupName="Navigation"/>
                     <RadioButton x:Name="AccountRadioButton" Click="AccountRadioButton_Click" Style="{StaticResource NavRadioButtonStyle}" Tag="&#xEC25;" Content="Moje konto" GroupName="Navigation" Visibility="Collapsed"/>

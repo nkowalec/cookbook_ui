@@ -112,6 +112,9 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecipieBtn.xaml.cs">
+      <DependentUpon>RecipieBtn.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SearchPage.xaml.cs">
       <DependentUpon>SearchPage.xaml</DependentUpon>
     </Compile>
@@ -125,6 +128,15 @@
     <Content Include="Assets\add_recipie.jpg" />
     <Content Include="Assets\chef_logo.jpg" />
     <Content Include="Assets\cookbook.jpg" />
+    <Content Include="Assets\dania\pizza_margherita.jpg" />
+    <Content Include="Assets\dania\zapiekanka_makaronowa.jpg" />
+    <Content Include="Assets\dania\zupakremzcukinii.jpg" />
+    <Content Include="Assets\kat\desery.jpg" />
+    <Content Include="Assets\kat\fast-food.jpg" />
+    <Content Include="Assets\kat\glowne.jpg" />
+    <Content Include="Assets\kat\przekaski.jpg" />
+    <Content Include="Assets\kat\salatki.jpg" />
+    <Content Include="Assets\kat\zupy.jpg" />
     <Content Include="Assets\liked.jpg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
@@ -160,11 +172,16 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="RecipieBtn.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="SearchPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

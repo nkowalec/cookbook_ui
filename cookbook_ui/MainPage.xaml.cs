@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Windows.UI.Popups;
 
 //Szablon elementu Pusta strona jest udokumentowany na stronie https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -43,9 +44,17 @@ namespace cookbook_ui
             }
         }
 
+        public static void PokazujKomendy(bool opcja)
+        {
+            foreach(var item in _commandList)
+            {
+                item.Visibility = opcja ? Visibility.Visible : Visibility.Collapsed;
+            }
+        }
+
         private static RadioButton _loginRadioBtn;
         private static RadioButton _accountRadioBtn;
-
+        private static List<Control> _commandList;
 
         public MainPage()
         {
@@ -55,7 +64,22 @@ namespace cookbook_ui
             currentView.BackRequested += CurrentView_BackRequested;
             _loginRadioBtn = LoginRadioButton;
             _accountRadioBtn = AccountRadioButton;
+            _commandList = new List<Control>();
+            foreach(var item in commbar.PrimaryCommands)
+            {
+                _commandList.Add((Control)item);
+            }
+            foreach (var item in commbar.SecondaryCommands)
+            {
+                _commandList.Add((Control)item);
+            }
+            Frame.Navigating += Frame_Navigating;
             navigateToPage(typeof(HomePage));
+        }
+
+        private void Frame_Navigating(object sender, NavigatingCancelEventArgs e)
+        {
+            PokazujKomendy(false);
         }
 
         private void CurrentView_BackRequested(object sender, BackRequestedEventArgs e)
@@ -109,6 +133,26 @@ namespace cookbook_ui
         private void AccountRadioButton_Click(object sender, RoutedEventArgs e)
         {
             navigateToPage(typeof(AccountPage));
+        }
+
+        private async void AppBarButton_Click(object sender, RoutedEventArgs e)
+        {
+            await new MessageDialog("Polubienie przepisu").ShowAsync();
+        }
+
+        private async void AppBarButton_Click_1(object sender, RoutedEventArgs e)
+        {
+            await new MessageDialog("Ujemny głos dla przepisu").ShowAsync();
+        }
+
+        private async void AppBarButton_Click_2(object sender, RoutedEventArgs e)
+        {
+            await new MessageDialog("Dodanie komentarza dla dodającego przepis").ShowAsync();
+        }
+
+        private async void AppBarButton_Click_3(object sender, RoutedEventArgs e)
+        {
+            await new MessageDialog("Poleć znajomemu").ShowAsync();
         }
     }
 }
