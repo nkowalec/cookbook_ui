@@ -8,6 +8,39 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+        <TextBox PlaceholderText="Szukaj" VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="15" Height="45"
+                 FontSize="25"/>
+        <Button Content="&#xE094;" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="15" Height="45"
+                Background="Transparent" FontFamily="Segoe MDL2 Assets" FontWeight="Bold" FontSize="25"/>
+        <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="15, 70, 15, 0">
+            <TextBlock Text="Koszt" HorizontalAlignment="Stretch"/>
+            <ComboBox HorizontalAlignment="Stretch" SelectedIndex="0">
+                <ComboBoxItem Content="cena nie gra roli" />
+                <ComboBoxItem Content="tanie danie" />
+                <ComboBoxItem Content="niedrogie" />
+                <ComboBoxItem Content="trochę kosztuje" />
+                <ComboBoxItem Content="bardzo drogie" />
+            </ComboBox>
+            <TextBlock Text="Czas" HorizontalAlignment="Stretch" Margin="0, 10, 0, 0" />
+            <ComboBox HorizontalAlignment="Stretch" SelectedIndex="0">
+                <ComboBoxItem Content="dowolny" />
+                <ComboBoxItem Content="do 30 minut" />
+                <ComboBoxItem Content="30 - 60 minut" />
+                <ComboBoxItem Content="powyżej 60 minut" />
+            </ComboBox>
+            <TextBlock Text="Kategoria" HorizontalAlignment="Stretch" Margin="0, 10, 0, 0" />
+            <ComboBox HorizontalAlignment="Stretch" SelectedIndex="0" Margin="0,0,0,10">
+                <ComboBoxItem Content="dowolna" />
+                <ComboBoxItem Content="danie główne" />
+                <ComboBoxItem Content="zupa" />
+                <ComboBoxItem Content="sałatka" />
+                <ComboBoxItem Content="deser" />
+                <ComboBoxItem Content="przekąska" />
+                <ComboBoxItem Content="fast food" />
+            </ComboBox>
+            <CheckBox Content="Szukaj w opisach" IsChecked="True" />
+            <CheckBox Content="Wegetariańskie" />
+            <CheckBox Content="Wegańskie"/>
+        </StackPanel>
     </Grid>
 </Page>
