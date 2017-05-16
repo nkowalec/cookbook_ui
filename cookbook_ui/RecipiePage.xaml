@@ -8,6 +8,40 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+        <ScrollViewer>
+            <StackPanel>
+                <Image Height="140" HorizontalAlignment="Stretch" Source="Assets/dania/zapiekanka_makaronowa.jpg" Stretch="UniformToFill" />
+                <TextBlock Text="ZAPIEKANKA MAKARONOWA Z KURCZAKIEM" Margin="15" Foreground="#333333" FontSize="20" TextWrapping="Wrap" TextAlignment="Center" />
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE121;" Grid.Column="0" FontWeight="Bold" FontSize="34" TextAlignment="Center"/>
+                    <TextBlock Text="45 min" Grid.Column="1" FontWeight="Bold" FontSize="25"/>
+                    <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xEC59;" Grid.Column="2" FontWeight="Bold" FontSize="34" TextAlignment="Center"/>
+                    <TextBlock Text="średni" Grid.Column="3" FontWeight="Bold" FontSize="25"/>
+                </Grid>
+                <TextBlock Text="Składniki:" Margin="15, 15, 15, 0" FontWeight="SemiBold"  />
+                <TextBlock Name="skladnikiBlock" TextWrapping="Wrap" Margin="15, 0, 15, 15" />
+                <TextBlock Text="Opis:" Margin="15, 0, 15, 0" FontWeight="SemiBold" />
+                <TextBlock Name="opisBlock" TextWrapping="Wrap" Margin="15, 0, 15, 15">
+                    <Bold>Krok 1</Bold><LineBreak />
+                    Ugotuj makaron.<LineBreak />
+                    <Bold>Krok 2</Bold><LineBreak />
+                    Zmiel mięso z kurczaka i podsmaż na oliwie z oliwek.<LineBreak />
+                    <Bold>Krok 3</Bold><LineBreak />
+                    Gdy mięso będzie złociste, dodaj posiekaną dymkę, pokrojone grzyby i smaż kolejne 3-5 minut.<LineBreak />
+                    <Bold>Krok 4</Bold><LineBreak />
+                    Dodaj drobno pokrojoną marchewkę wraz z pomidorami i kontynuuj smażenie przez 3 minuty.<LineBreak />
+                    <Bold>Krok 5</Bold><LineBreak />
+                    Rozpuść Fix Spaghetti Bolognese Knorr w 400 mililitrach wody, doprowadź do wrzenia, dodaj na patelnię z mięsem i warzywami i pozostaw na wolnym ogniu przez 10 minut, mieszając od czasu do czasu.<LineBreak />
+                    <Bold>Krok 6</Bold><LineBreak />
+                    Dodaj na patelnię makaron, posiekaną pietruszkę. Wymieszaj dobrze wszystko, przełóż do żaroodpornego naczynia, posyp startym serem i piecz w piekarniku na funkcji grill, aż ser się zarumieni.
+                </TextBlock>
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Page>

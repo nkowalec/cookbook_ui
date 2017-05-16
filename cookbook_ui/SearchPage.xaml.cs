@@ -27,7 +27,6 @@ namespace cookbook_ui
         public SearchPage()
         {
             this.InitializeComponent();
-            MainPage.PokazujKomendy(true);
         }
 
         private async void Button_Click(object sender, RoutedEventArgs e)
@@ -37,7 +36,7 @@ namespace cookbook_ui
             sb.AppendLine("Czas: " + ((ComboBoxItem)czasCBox.SelectedItem).Content);
             sb.AppendLine("Kategoria: " + ((ComboBoxItem)katCBox.SelectedItem).Content);
             
-            MessageDialog dial = new MessageDialog("Widok wyszukanych przepisów: \n" + sb.ToString());
+            MessageDialog dial = new MessageDialog("Widok wyszukanych przepisów: \n" + searchBox.Text + "\n" + sb.ToString());
             await dial.ShowAsync();
             Frame.Navigate(typeof(HomePage));
         }

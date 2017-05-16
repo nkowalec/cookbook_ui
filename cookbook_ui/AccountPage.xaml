@@ -29,20 +29,35 @@
         </Grid>
         <Grid VerticalAlignment="Stretch" Grid.Row="1" Margin="0,0,0,0">
             <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                <Button Content="MOJE PRZEPISY" HorizontalAlignment="Stretch" Style="{StaticResource LargeBtnStyle}" Click="Button_Click" >
+                <Button HorizontalAlignment="Stretch" Style="{StaticResource LargeBtnStyle}" Click="Button_Click" >
                     <Button.Background>
                         <ImageBrush x:Name="brush1" ImageSource="/Assets/cookbook.jpg" Stretch="UniformToFill" Opacity="0.8" />
                     </Button.Background>
+                    <Border Background="#DDDDDD" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0">
+                        <TextBlock Margin="5, 0, 5, 0" VerticalAlignment="Center">
+                            MOJE PRZEPISY
+                        </TextBlock>
+                    </Border>
                 </Button>
-                <Button Content="DODAJ PRZEPIS" HorizontalAlignment="Stretch" Style="{StaticResource LargeBtnStyle}" Click="Button_Click_2" >
+                <Button HorizontalAlignment="Stretch" Style="{StaticResource LargeBtnStyle}" Click="Button_Click_2" >
                     <Button.Background>
                         <ImageBrush ImageSource="Assets/add_recipie.jpg" Opacity="0.8" Stretch="UniformToFill"/>
                     </Button.Background>
+                    <Border Background="#DDDDDD" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0">
+                        <TextBlock Margin="5, 0, 5, 0" VerticalAlignment="Center">
+                            DODAJ PRZEPIS
+                        </TextBlock>
+                    </Border>
                 </Button>
-                <Button Content="ULUBIONE" HorizontalAlignment="Stretch" Style="{StaticResource LargeBtnStyle}" Click="Button_Click_1">
+                <Button HorizontalAlignment="Stretch" Style="{StaticResource LargeBtnStyle}" Click="Button_Click_1">
                     <Button.Background>
                         <ImageBrush Stretch="UniformToFill" ImageSource="Assets/liked.jpg" Opacity="0.8"/>
                     </Button.Background>
+                    <Border Background="#DDDDDD" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0">
+                        <TextBlock Margin="5, 0, 5, 0" VerticalAlignment="Center">
+                            ULUBIONE
+                        </TextBlock>
+                    </Border>
                 </Button>
             </StackPanel>
         </Grid>

@@ -25,6 +25,18 @@ namespace cookbook_ui
         public RecipiePage()
         {
             this.InitializeComponent();
+            MainPage.PokazujKomendy(true);
+            skladnikiBlock.Text = @"- pierś z kurczaka: 500 g
+- makaron muszelki: 250 g
+- Fix Spaghetti Bolognese Knorr: 1 opak
+- woda: 400 ml
+- pieczarki: 150 g
+- pomidory: 2 szt
+- marchew: 100 g
+- cebula dymka: 3 szt
+- gałązka natki pietruszki
+- żółty ser: 100 g
+- oliwa z oliwek: 15 ml";
         }
     }
 }

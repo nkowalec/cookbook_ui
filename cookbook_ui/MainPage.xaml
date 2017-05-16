@@ -11,12 +11,18 @@
         <CommandBar ClosedDisplayMode="Compact" Name="commbar" >
             <CommandBar.Content>
                 <Grid>
-                    <AppBarButton Click="HamburgerButton_Click">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <AppBarButton Grid.Column="0" Click="HamburgerButton_Click">
                         <AppBarButton.Icon>
                             <FontIcon Glyph="&#xE700;" FontFamily="Segoe MDL2 Assets" />
                         </AppBarButton.Icon>
                     </AppBarButton>
-                    
+                    <TextBlock Grid.Column="1" VerticalAlignment="Center" FontSize="20" Height="34" Margin="10,10,0.667,16" >
+                        cookbook_ui
+                    </TextBlock>
                 </Grid>
             </CommandBar.Content>
             <CommandBar.PrimaryCommands>
