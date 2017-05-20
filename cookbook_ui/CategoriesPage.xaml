@@ -11,66 +11,85 @@
         <ScrollViewer>
             <StackPanel VerticalAlignment="Top" HorizontalAlignment="Stretch">
                 <TextBlock Text="Kategorie" FontSize="36" FontWeight="SemiBold" Margin="15, 10, 15, 0" />
-                <Button HorizontalAlignment="Stretch" Style="{StaticResource LargeBtnStyle}" Click="Open_Category" >
-                    <Button.Background>
-                        <ImageBrush Stretch="UniformToFill" ImageSource="Assets/kat/glowne.jpg" Opacity="0.8" />
-                    </Button.Background>
-                    <Border Background="#DDDDDD" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0">
-                        <TextBlock Margin="5, 0, 5, 0" VerticalAlignment="Center">
-                            DANIA GŁÓWNE
-                        </TextBlock>
-                    </Border>
-                </Button>
-                <Button HorizontalAlignment="Stretch" Style="{StaticResource LargeBtnStyle}" Click="Open_Category">
-                    <Button.Background>
-                        <ImageBrush Stretch="UniformToFill" ImageSource="Assets/kat/zupy.jpg" Opacity="0.8"/>
-                    </Button.Background>
-                    <Border Background="#DDDDDD" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0">
-                        <TextBlock Margin="5, 0, 5, 0" VerticalAlignment="Center">
-                            ZUPY
-                        </TextBlock>
-                    </Border>
-                </Button>
-                <Button HorizontalAlignment="Stretch" Style="{StaticResource LargeBtnStyle}" Click="Open_Category">
-                    <Button.Background>
-                        <ImageBrush Stretch="UniformToFill" ImageSource="Assets/kat/salatki.jpg" Opacity="0.8"/>
-                    </Button.Background>
-                    <Border Background="#DDDDDD" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0">
-                        <TextBlock Margin="5, 0, 5, 0" VerticalAlignment="Center">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    
+                    <Button Grid.Column="0" HorizontalAlignment="Stretch" Style="{StaticResource LargeBtnStyle}" Click="Open_Category" >
+                        <Button.Background>
+                            <ImageBrush Stretch="UniformToFill" ImageSource="Assets/kat/glowne.jpg" Opacity="0.8" />
+                        </Button.Background>
+                        <Border Background="#DDDDDD" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0">
+                            <TextBlock Margin="5, 0, 5, 0" VerticalAlignment="Center">
+                                DANIA GŁÓWNE
+                            </TextBlock>
+                        </Border>
+                    </Button>
+                    <Button Grid.Column="1" HorizontalAlignment="Stretch" Style="{StaticResource LargeBtnStyle}" Click="Open_Category">
+                        <Button.Background>
+                            <ImageBrush Stretch="UniformToFill" ImageSource="Assets/kat/zupy.jpg" Opacity="0.8"/>
+                        </Button.Background>
+                        <Border Background="#DDDDDD" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0">
+                            <TextBlock Margin="5, 0, 5, 0" VerticalAlignment="Center">
+                                ZUPY
+                            </TextBlock>
+                        </Border>
+                    </Button>
+                </Grid>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" HorizontalAlignment="Stretch" Style="{StaticResource LargeBtnStyle}" Click="Open_Category">
+                        <Button.Background>
+                            <ImageBrush Stretch="UniformToFill" ImageSource="Assets/kat/salatki.jpg" Opacity="0.8"/>
+                        </Button.Background>
+                        <Border Background="#DDDDDD" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0">
+                            <TextBlock Margin="5, 0, 5, 0" VerticalAlignment="Center">
                             SAŁATKI
-                        </TextBlock>
-                    </Border>
-                </Button>
-                <Button HorizontalAlignment="Stretch" Style="{StaticResource LargeBtnStyle}" Click="Open_Category">
-                    <Button.Background>
-                        <ImageBrush Stretch="UniformToFill" ImageSource="Assets/kat/desery.jpg" Opacity="0.8"/>
-                    </Button.Background>
-                    <Border Background="#DDDDDD" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0">
-                        <TextBlock Margin="5, 0, 5, 0" VerticalAlignment="Center">
+                            </TextBlock>
+                        </Border>
+                    </Button>
+                    <Button Grid.Column="1" HorizontalAlignment="Stretch" Style="{StaticResource LargeBtnStyle}" Click="Open_Category">
+                        <Button.Background>
+                            <ImageBrush Stretch="UniformToFill" ImageSource="Assets/kat/desery.jpg" Opacity="0.8"/>
+                        </Button.Background>
+                        <Border Background="#DDDDDD" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0">
+                            <TextBlock Margin="5, 0, 5, 0" VerticalAlignment="Center">
                             DESERY
-                        </TextBlock>
-                    </Border>
-                </Button>
-                <Button HorizontalAlignment="Stretch" Style="{StaticResource LargeBtnStyle}" Click="Open_Category">
-                    <Button.Background>
-                        <ImageBrush Stretch="UniformToFill" ImageSource="Assets/kat/przekaski.jpg" Opacity="0.8"/>
-                    </Button.Background>
-                    <Border Background="#DDDDDD" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0">
-                        <TextBlock Margin="5, 0, 5, 0" VerticalAlignment="Center">
+                            </TextBlock>
+                        </Border>
+                    </Button>
+                </Grid>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" HorizontalAlignment="Stretch" Style="{StaticResource LargeBtnStyle}" Click="Open_Category">
+                        <Button.Background>
+                            <ImageBrush Stretch="UniformToFill" ImageSource="Assets/kat/przekaski.jpg" Opacity="0.8"/>
+                        </Button.Background>
+                        <Border Background="#DDDDDD" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0">
+                            <TextBlock Margin="5, 0, 5, 0" VerticalAlignment="Center">
                             PRZEKĄSKI
-                        </TextBlock>
-                    </Border>
-                </Button>
-                <Button HorizontalAlignment="Stretch" Style="{StaticResource LargeBtnStyle}" Click="Open_Category">
-                    <Button.Background>
-                        <ImageBrush Stretch="UniformToFill" ImageSource="Assets/kat/fast-food.jpg" Opacity="0.8"/>
-                    </Button.Background>
-                    <Border Background="#DDDDDD" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0" >
-                        <TextBlock Margin="5, 0, 5, 0" VerticalAlignment="Center">
+                            </TextBlock>
+                        </Border>
+                    </Button>
+                    <Button Grid.Column="1" HorizontalAlignment="Stretch" Style="{StaticResource LargeBtnStyle}" Click="Open_Category">
+                        <Button.Background>
+                            <ImageBrush Stretch="UniformToFill" ImageSource="Assets/kat/fast-food.jpg" Opacity="0.8"/>
+                        </Button.Background>
+                        <Border Background="#DDDDDD" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0" >
+                            <TextBlock Margin="5, 0, 5, 0" VerticalAlignment="Center">
                             FAST FOOD
-                        </TextBlock>
-                    </Border>
-                </Button>
+                            </TextBlock>
+                        </Border>
+                    </Button>
+                </Grid>
             </StackPanel>
         </ScrollViewer>
     </Grid>
