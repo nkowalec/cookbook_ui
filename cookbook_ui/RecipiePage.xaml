@@ -25,9 +25,9 @@
                     <TextBlock Text="średni" Grid.Column="3" FontWeight="Bold" FontSize="25"/>
                 </Grid>
                 <TextBlock Text="Składniki:" Margin="15, 15, 15, 0" FontWeight="SemiBold"  />
-                <TextBlock Name="skladnikiBlock" TextWrapping="Wrap" Margin="15, 0, 15, 15" />
+                <TextBlock Name="skladnikiBlock" TextWrapping="Wrap" Margin="15, 0, 15, 15" TextAlignment="Justify" />
                 <TextBlock Text="Opis:" Margin="15, 0, 15, 0" FontWeight="SemiBold" />
-                <TextBlock Name="opisBlock" TextWrapping="Wrap" Margin="15, 0, 15, 15">
+                <TextBlock Name="opisBlock" TextWrapping="Wrap" Margin="15, 0, 15, 15" TextAlignment="Justify">
                     <Bold>Krok 1</Bold><LineBreak />
                     Ugotuj makaron.<LineBreak />
                     <Bold>Krok 2</Bold><LineBreak />

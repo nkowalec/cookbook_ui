@@ -30,7 +30,7 @@ namespace cookbook_ui
 
         public async void Open_Category(object sender, RoutedEventArgs args)
         {
-            await new MessageDialog("Otwarcie kategorii " + ((Button)sender).Content + "\nwidok jak \"GŁÓWNY\" - Przeglądaj").ShowAsync();
+            await new MessageDialog("Otwarcie kategorii " + ((TextBlock)((Border)((Button)sender).Content).Child).Text + "\nwidok jak \"GŁÓWNY\" - Przeglądaj").ShowAsync();
         }
     }
 }
