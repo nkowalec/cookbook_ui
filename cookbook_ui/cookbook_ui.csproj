@@ -133,6 +133,7 @@
   <ItemGroup>
     <Content Include="Assets\add_recipie.jpg" />
     <Content Include="Assets\chef_logo.jpg" />
+    <Content Include="Assets\chef_logo_gs.jpg" />
     <Content Include="Assets\cookbook.jpg" />
     <Content Include="Assets\dania\pizza_margherita.jpg" />
     <Content Include="Assets\dania\zapiekanka_makaronowa.jpg" />

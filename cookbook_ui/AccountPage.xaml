@@ -10,7 +10,8 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="49*" />
-            <RowDefinition Height="271*" />
+            <RowDefinition Height="155*" />
+            <RowDefinition Height="50*" />
         </Grid.RowDefinitions>
 
         <Grid Grid.Row="0" VerticalAlignment="Top" Margin="20,0,20,0" HorizontalAlignment="Stretch" Height="100">
@@ -61,5 +62,10 @@
                 </Button>
             </StackPanel>
         </Grid>
+        <Ellipse Grid.Row="2" Width="100" Height="100">
+            <Ellipse.Fill>
+                <ImageBrush ImageSource="/Assets/chef_logo_gs.jpg" Stretch="UniformToFill" />
+            </Ellipse.Fill>
+        </Ellipse>
     </Grid>
 </Page>

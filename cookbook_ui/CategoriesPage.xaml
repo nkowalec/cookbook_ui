@@ -10,8 +10,8 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <ScrollViewer>
             <StackPanel VerticalAlignment="Top" HorizontalAlignment="Stretch">
-                <TextBlock Text="Kategorie" FontSize="36" FontWeight="SemiBold" Margin="15, 10, 15, 0" />
-                <Grid>
+                <TextBlock Text="Kategorie" FontSize="36" FontWeight="SemiBold" Margin="15, 10, 15, 15" />
+                <Grid Margin="10, 0, 0, 10">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition />
                         <ColumnDefinition />
@@ -38,7 +38,7 @@
                         </Border>
                     </Button>
                 </Grid>
-                <Grid>
+                <Grid Margin="10, 0, 0, 10">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition />
                         <ColumnDefinition />
@@ -64,7 +64,7 @@
                         </Border>
                     </Button>
                 </Grid>
-                <Grid>
+                <Grid Margin="10, 0, 0, 10">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition />
                         <ColumnDefinition />
@@ -86,6 +86,33 @@
                         <Border Background="#DDDDDD" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0" >
                             <TextBlock Margin="5, 0, 5, 0" VerticalAlignment="Center">
                             FAST FOOD
+                            </TextBlock>
+                        </Border>
+                    </Button>
+                </Grid>
+                <Grid Margin="10, 0, 0, 0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+                    <Button Grid.Column="0" HorizontalAlignment="Stretch" Style="{StaticResource LargeBtnStyle}" Click="Open_Category" >
+                        <Button.Background>
+                            <ImageBrush Stretch="UniformToFill" ImageSource="Assets/kat/glowne.jpg" Opacity="0.8" />
+                        </Button.Background>
+                        <Border Background="#DDDDDD" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0">
+                            <TextBlock Margin="5, 0, 5, 0" VerticalAlignment="Center">
+                                DANIA POLSKIE
+                            </TextBlock>
+                        </Border>
+                    </Button>
+                    <Button Grid.Column="1" HorizontalAlignment="Stretch" Style="{StaticResource LargeBtnStyle}" Click="Open_Category">
+                        <Button.Background>
+                            <ImageBrush Stretch="UniformToFill" ImageSource="Assets/kat/przekaski.jpg" Opacity="0.8"/>
+                        </Button.Background>
+                        <Border Background="#DDDDDD" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0">
+                            <TextBlock Margin="5, 0, 5, 0" VerticalAlignment="Center">
+                                SZYBKIE DANIA
                             </TextBlock>
                         </Border>
                     </Button>
